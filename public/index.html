@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض المحتوى - محرر TinyMCE المخصص</title>
+    
+    <!-- Custom CSS for Public View -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/public.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="public-view">
+    <div class="public-container">
+        <!-- Header -->
+        <header class="public-header">
+            <div class="header-content">
+                <h1><i class="fas fa-file-alt"></i> عرض المحتوى</h1>
+                <div class="header-actions">
+                    <button id="backToEditor" class="btn btn-outline">
+                        <i class="fas fa-edit"></i> العودة للمحرر
+                    </button>
+                    <button id="printContent" class="btn btn-secondary">
+                        <i class="fas fa-print"></i> طباعة
+                    </button>
+                    <button id="shareContent" class="btn btn-primary">
+                        <i class="fas fa-share"></i> مشاركة
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <main class="public-content">
+            <div id="contentDisplay" class="content-display">
+                <!-- المحتوى سيتم تحميله هنا -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="public-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 محرر TinyMCE المخصص. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#" id="aboutLink">حول المشروع</a>
+                    <a href="#" id="helpLink">المساعدة</a>
+                    <a href="#" id="contactLink">اتصل بنا</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>جاري تحميل المحتوى...</p>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>مشاركة المحتوى</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <button class="share-btn" data-method="copy">
+                        <i class="fas fa-copy"></i>
+                        نسخ الرابط
+                    </button>
+                    <button class="share-btn" data-method="email">
+                        <i class="fas fa-envelope"></i>
+                        إرسال بالبريد
+                    </button>
+                    <button class="share-btn" data-method="social">
+                        <i class="fas fa-share-alt"></i>
+                        مشاركة اجتماعية
+                    </button>
+                </div>
+                <div class="share-url">
+                    <label>رابط المشاركة:</label>
+                    <input type="text" id="shareUrl" readonly>
+                    <button id="copyUrl" class="btn btn-outline">نسخ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>حول المشروع</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="about-content">
+                    <h4>محرر TinyMCE المخصص</h4>
+                    <p>محرر نصوص متقدم ومخصص باللغة العربية مع مميزات متطورة لتحرير المحتوى.</p>
+                    
+                    <h5>المميزات الرئيسية:</h5>
+                    <ul>
+                        <li>واجهة مستخدم عربية متطورة</li>
+                        <li>مكونات جاهزة قابلة للتخصيص</li>
+                        <li>حفظ تلقائي ومتقدم</li>
+                        <li>دعم السحب والإفلات</li>
+                        <li>عداد كلمات وحروف حي</li>
+                        <li>تصميم متجاوب لجميع الأجهزة</li>
+                    </ul>
+                    
+                    <h5>التقنيات المستخدمة:</h5>
+                    <ul>
+                        <li>TinyMCE Editor</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>LocalStorage API</li>
+                        <li>Font Awesome Icons</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/public.js"></script>
+</body>
+</html>
